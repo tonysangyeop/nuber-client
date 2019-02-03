@@ -10,7 +10,7 @@ import AddPlace from "../../Routes/AddPlace";
 import EditAccount from "../../Routes/EditAccount";
 import FindAddress from "../../Routes/FindAddress";
 import Home from "../../Routes/Home";
-import OutHome from "../../Routes/OutHome";
+import LoginPresenter from "../../Routes/Login";
 import PhoneLogin from "../../Routes/PhoneLogin";
 import Places from "../../Routes/Places";
 import Ride from "../../Routes/Ride";
@@ -25,7 +25,7 @@ const AppPresenter: React.SFC<IProps> = ({ isLoggedIn }) => <BrowserRouter>{isLo
 
 const LoggedOutRoutes: React.SFC = () => (
     <Switch>
-        <Route path={"/"} exact={true} component={OutHome} />
+        <Route path={"/"} exact={true} component={LoginPresenter} />
         <Route path={"/phone-login"} component={PhoneLogin} />
         <Route path={"/verify-phone/:number"} component={VerifyPhone} />
         <Route path={"/social-login"} component={SocialLogin} />
